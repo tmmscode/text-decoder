@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <h1 class="header__logo">Decodificador de texto</h1>
+        </a>
+        <div class="message" id="message"></div>
+    </header>
+    <main class="main__container">
+        <section class="main__container__input">
+            <div class="main__container__input__helpers">
+                <button class="button" id="paste_button" onclick="paste()"><img src="assets/paste.png"> Colar texto</button>
+                <button class="button" id="clear_button" onclick="erase()"><img src="assets/eraser.png"> Limpar campo</button>
+            </div>
+            <div class="main__container__input__text">
+                <textarea type="text" class="text_input" id="text_input" placeholder="Digite seu texto"></textarea>
+                <div class="main__container__input__button">
+                    <div class="attention__rules">
+                        <img src="assets/exclamation-circle.png" alt="ícone de exclamação">
+                        <p>Apenas letras minúsculas e sem acento</p>
+                    </div>
+                    <div class="main__container__input__actions">
+                        <button class="button" id="encrypt_button" onclick="encrypt()"><img src="assets/lock.png"> Criptografar</button>
+                        <button class="button" id="decrypt_button" onclick="decrypt()"><img src="assets/unlock.png"> Descriptografar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__container__output">
+            <div id="empty_placeholder">
+                <img src="assets/empty.png" alt="lupa com um x em cima" id="empty_image">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div id="text_output"></div>
+            <button class="button" id="copy_button" onclick="copyToClipboard()"><img src="assets/copy.png"> Copiar</button>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>Projeto desenvolvido durante a formação Oracle Next Education, em parceria com a <a href="https://www.alura.com.br" target="_blank" id="alura_link">Alura</a>, por Thiago de Melo.</p>
+        <a href="https://github.com/tmmscode" target="_blank" id="github_link">
+            <img src="assets/github.png">
+            <span>github</span>
+        </a>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
